@@ -16,9 +16,11 @@ __author__ = 'rkzyang'
 # # OOP: everything(objects) can be decomposed a collection of properties
 
 from Py_App_models_3.post import Post
+from database_3 import Database
 
-post = Post("Post1 title", "Post1 content", "Post1 author")
-post2 = Post("Post2 title", "Post2 content", "Post2 author")
+Database.initialize()
 
-print(post.content)
-print(post2.content)
+post = Post(blog_id="123",
+            title="Another great post",
+            content="This is some same contect",
+            author="RKY")
