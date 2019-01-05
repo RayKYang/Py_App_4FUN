@@ -22,5 +22,10 @@ Database.initialize()
 
 post = Post(blog_id="123",
             title="Another great post",
-            content="This is some same contect",
+            content="This is some same content",
             author="RKY")
+
+posts = Post.from_blog('123')
+
+for post in posts:
+    print(post)
